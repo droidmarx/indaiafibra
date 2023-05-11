@@ -3,14 +3,15 @@ const loginBtn = document.querySelector("#login-btn");
 
 const users = [
   { username: "Gui", password: "Marx" },
-  { username: "Andre", password: "levi" },
+  { username: "Andre", password: "Levi" },
   { username: "Elvis", password: "Santos" },
   { username: "Robson", password: "Duarte" },
   { username: "Sergio", password: "Luiz" },
   { username: "Anderson", password: "Fernandes" },
   { username: "Adriano", password: "Fernandes" },
   { username: "Anderson", password: "Reis" },
-  
+{ username: "Jhonatan", password: "Lua" },
+{ username: "Alexandre", password: "Doneda" },
 
   // adicionar mais usuarios
 ];
