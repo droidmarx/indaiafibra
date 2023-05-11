@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="./img/logo2.png">
+	<link rel="stylesheet" href="./css/portal.css">
+  <title>Portal</title>
+</head>
+<body>
+	<meta charset="utf-8">
+	<title>Portal</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<nav id="nav">
+			<a><img class="logo" src="./img/logo2.png" width="80px" height="80px" alt="Logo"></a>
+			<button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+				<span id="hamburger"></span>
+			</button>
+			<h1>Portal do Colaborador</h1>
+	
+			<ul id="menu" role="menu">
+				<li><a href="portal.html">Produtividade</a></li>
+				<li><a href="horas.html">Banco de horas</a></li>
+				<li onclick="handleLogout()"><a>Sair</a></li>
+			</ul> 
+		</nav>
+	</header>
+
+	<div class="frame">
+		<img class="instalacao" src="./img/Produtividade.png" alt="Produtividade">
+	</div>
+		
+	
+
+	<footer>
+		<p>&copy; 2023 - Todos os direitos reservados.</p>
+	</footer>
+
+	<script src="./js/portal.js"></script>
+</body>
+</html>
