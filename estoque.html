@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="./img/logo2.png">
+	<link rel="stylesheet" href="./css/estoque.css">
+  <link rel="stylesheet" href="./css/portal.css">
+  <title>Portal</title>
+</head>
+  
+</head>
+<body>
+
+  <header>
+		<nav id="nav">
+			<a><img class="logo" src="./img/logo2.png" width="80px" height="80px" alt="Logo"></a>
+			<button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+				<span id="hamburger"></span>
+			</button>
+			<h1>Portal do Colaborador</h1>
+	
+			<ul id="menu" role="menu">
+				<li><a href="portal.html">Produtividade</a></li>
+				<li><a href="horas.html">Banco de horas</a></li>
+				<li><a href="estoque.html">Ordem de Serviço</a></li>
+				<li onclick="handleLogout()"><a>Sair</a></li>
+			</ul> 
+		</nav>
+	</header>
+
+  <div class="container">
+    <h1>Controle de Estoque</h1>
+    
+    <div class="botoes">
+      <button id="openButton" onclick="toggleStock()">Lançar<br>intes</button>
+      <button onclick="showCurrentStock()">Ver meu<br>Estoque Atual</button>
+    <button onclick="clearStock()">Limpar<br>Estoque</button>
+    <button onclick="copyToClipboard()">Copy</button>
+    </div>
+
+    <form id="stockForm" style="display: none;">
+      <div class="form-field">
+        <label for="apc">Conector APC:</label>
+        <input type="number" id="apc" min="0" value="0" />
+      </div>
+      <div class="form-field">
+        <label for="upc">Conector UPC:</label>
+        <input type="number" id="upc" min="0" value="0" />
+      </div>
+      <div class="form-field">
+        <label for="drop">Drop:</label>
+        <input type="number" id="drop" min="0" value="0" />
+      </div>
+      <div class="form-field">
+        <label for="ax2">Ax2:</label>
+        <input type="number" id="ax2" min="0" value="0" />
+      </div>
+      <div class="form-field">
+        <label for="onu">ONU:</label>
+        <input type="number" id="onu" min="0" value="0" />
+      </div>
+      <div class="form-field">
+        <label for="fecho">Fecho:</label>
+        <input type="number" id="fecho" min="0" value="0" />
+      </div>
+      <div class="form-field">
+        <label for="anel">Anel:</label>
+        <input type="number" id="anel" min="0" value="0" />
+      </div>
+      <div class="form-field">
+        <label for="roldana">Roldana:</label>
+        <input type="number" id="roldana" min="0" value="0" />
+      </div>
+      <div class="form-field">
+        <label for="fixaFio">Fixa fio:</label>
+        <input type="number" id="fixaFio" min="0" value="0" />
+      </div>
+      <div class="form-field">
+        <label for="caboRede">Cabo de Rede:</label>
+        <input type="number" id="caboRede" min="0" value="0" />
+      </div>
+      <div class="form-field">
+        <label for="concRJ45">Conc. RJ45:</label>
+        <input type="number" id="concRJ45" min="0" value="0" />
+      </div>
+      <div class="form-field">
+        <label for="esticador">Esticador:</label>
+        <input type="number" id="esticador" min="0" value="0" />
+      </div>
+      <div class="form-field">
+        <label for="kitFusao">Kit Fusão:</label>
+        <input type="number" id="kitFusao" min="0" value="0" />
+      </div>
+
+      <div class="botoes">
+      <button class="enviar" onclick="updateStock()">Enviar</button>
+      </div>
+    
+    </form>
+    <div id="stockDisplay"></div>
+  </div>
+
+ 
+  <script src="./js/estoque.js"></script>
+
+</body>
+</html>

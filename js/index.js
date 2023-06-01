@@ -10,7 +10,7 @@ const users = [
   { username: "Anderson", password: "Fernandes" },
   { username: "Adriano", password: "Fernandes" },
   { username: "Anderson", password: "Reis" },
-{ username: "Jhonattan", password: "Lua" },
+{ username: "Jhonatan", password: "Lua" },
 { username: "Alexandre", password: "Doneda" },
 
   // adicionar mais usuarios
