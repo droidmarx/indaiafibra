@@ -41,28 +41,49 @@
     </div>
 
 
-    <div id="additionalFields" style="display: none;">
-      <div class="form-field">
-        <label for="tecnico">Técnico:</label>
-        <input type="text" id="tecnico" />
-      </div>
-      <div class="form-field">
-        <label for="cliente">Cliente:</label>
-        <input type="text" id="cliente" />
-      </div>
-      <div class="form-field">
-        <label for="sinalCTO">Sinal CTO:</label>
-        <input type="text" id="sinalCTO" />
-      </div>
-      <div class="form-field">
-        <label for="sinalCliente">Sinal Cliente:</label>
-        <input type="text" id="sinalCliente" />
-      </div>
-      <button onclick="refreshStock()">Atualizar</button>
-    </div>
+    
 
 
     <form id="stockForm" style="display: none;">
+	    
+	    <div id="additionalFields" style="display: none;">
+
+      <div class="form-field">
+
+        <label for="tecnico">Técnico:</label>
+
+        <input type="text" id="tecnico" />
+
+      </div>
+
+      <div class="form-field">
+
+        <label for="cliente">Cliente:</label>
+
+        <input type="text" id="cliente" />
+
+      </div>
+
+      <div class="form-field">
+
+        <label for="sinalCTO">Sinal CTO:</label>
+
+        <input type="text" id="sinalCTO" />
+
+      </div>
+
+      <div class="form-field">
+
+        <label for="sinalCliente">Sinal Cliente:</label>
+
+        <input type="text" id="sinalCliente" />
+
+      </div>
+
+      <button onclick="refreshStock()">Atualizar</button>
+
+    </div>
+	    
       <div class="form-field">
         <label for="apc">Conector APC:</label>
         <input type="number" id="apc" min="0" value="0" />
