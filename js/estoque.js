@@ -117,16 +117,5 @@ function handleLogout() {
   setTimeout(() => {
     window.location.href = "./index.html";
   }, 200);
-}
-
-
-function toggleAdditionalFields() {
-  var additionalFields = document.getElementById("additionalFields");
-
-  if (additionalFields.style.display === "none") {
-    additionalFields.style.display = "block";
-  } else {
-    additionalFields.style.display = "none";
-  }
-}
+}
 
