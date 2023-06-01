@@ -6,7 +6,6 @@
   text-align: center;
   padding: 20px;
   background: #0060a7;
-  height: 100vh;
 }
 
 .botoes {
@@ -70,6 +69,7 @@
 }
 
 #stockDisplay {
+  display: block;
   margin: 20px;
   text-align: center;
   font-size: 20px;

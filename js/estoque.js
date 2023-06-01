@@ -50,7 +50,7 @@ function updateStock() {
 function showCurrentStock() {
   var savedStock = localStorage.getItem("stock");
   var stockDisplay = document.getElementById("stockDisplay");
-  stockDisplay.style.display = (stockDisplay.style.display === "none") ? "block" : "none";
+  stockDisplay.style.display = (stockDisplay.style.display === "block") ? "none" : "block";
 
   if (savedStock) {
     var currentStock = JSON.parse(savedStock);
@@ -118,3 +118,15 @@ function handleLogout() {
     window.location.href = "./index.html";
   }, 200);
 }
+
+
+function toggleAdditionalFields() {
+  var additionalFields = document.getElementById("additionalFields");
+
+  if (additionalFields.style.display === "none") {
+    additionalFields.style.display = "block";
+  } else {
+    additionalFields.style.display = "none";
+  }
+}
+

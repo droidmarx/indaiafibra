@@ -8,9 +8,7 @@
 	<link rel="shortcut icon" href="./img/logo2.png">
 	<link rel="stylesheet" href="./css/estoque.css">
   <link rel="stylesheet" href="./css/portal.css">
-  <title>Portal</title>
-</head>
-  
+  <title>Estoque</title>
 </head>
 <body>
 
@@ -20,12 +18,12 @@
 			<button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
 				<span id="hamburger"></span>
 			</button>
-			<h1>Portal do Colaborador</h1>
+			<h1>Estoque</h1>
 	
 			<ul id="menu" role="menu">
 				<li><a href="portal.html">Produtividade</a></li>
 				<li><a href="horas.html">Banco de horas</a></li>
-				<li><a href="estoque.html">Ordem de Serviço</a></li>
+				<li><a href="estoque.html">Estoque</a></li>
 				<li onclick="handleLogout()"><a>Sair</a></li>
 			</ul> 
 		</nav>
@@ -37,9 +35,32 @@
     <div class="botoes">
       <button id="openButton" onclick="toggleStock()">Lançar<br>intes</button>
       <button onclick="showCurrentStock()">Ver meu<br>Estoque Atual</button>
-    <button onclick="clearStock()">Limpar<br>Estoque</button>
-    <button onclick="copyToClipboard()">Copy</button>
+      <button onclick="clearStock()">Limpar<br>Estoque</button>
+      <button id="technicianButton" onclick="toggleAdditionalFields()">Informações do Técnico</button>
+      <button onclick="copyToClipboard()">Copy</button>
     </div>
+
+
+    <div id="additionalFields" style="display: none;">
+      <div class="form-field">
+        <label for="tecnico">Técnico:</label>
+        <input type="text" id="tecnico" />
+      </div>
+      <div class="form-field">
+        <label for="cliente">Cliente:</label>
+        <input type="text" id="cliente" />
+      </div>
+      <div class="form-field">
+        <label for="sinalCTO">Sinal CTO:</label>
+        <input type="text" id="sinalCTO" />
+      </div>
+      <div class="form-field">
+        <label for="sinalCliente">Sinal Cliente:</label>
+        <input type="text" id="sinalCliente" />
+      </div>
+      <button onclick="refreshStock()">Atualizar</button>
+    </div>
+
 
     <form id="stockForm" style="display: none;">
       <div class="form-field">
@@ -95,8 +116,10 @@
         <input type="number" id="kitFusao" min="0" value="0" />
       </div>
 
+
+
       <div class="botoes">
-      <button class="enviar" onclick="updateStock()">Enviar</button>
+        <button class="enviar" onclick="updateStock()">Enviar</button>
       </div>
     
     </form>
